@@ -1,8 +1,19 @@
 //Given an array of strings, use a function to reverse all the elements in the
 //string in ascending order and the specific elements in descending order
 function arrayOfSrg (srg){
+  
+        srg.reverse()
+        const srg2 = [0, 2];
+      srg2.forEach((i) => {
+        if (srg[i]) {
+          srg[i] = srg[i].split('').reverse().join('');
+        }
+      });
+      return srg;
+    }
+    console.log(arrayOfSrg(["Emmily","web developer","Nigeria"]));
 
-}
+
 
 
 //Given an array of objects, each object representing a person with a name and age property, write a 
@@ -51,3 +62,17 @@ function signs(arr) {
 
   //Given an array of objects, where each object represents an employee with an id, name, and salary property,
   // write a function that returns a new array of employee objects sorted by their salary in ascending order.
+
+  function employeesSalary(employees) {
+    return employees.sort((a, b) => a - b);
+  }
+  let employees = [
+    { id: 1, name: 'Emmie', salary: 10000 },
+    { id: 2, name: 'John', salary: 705000},
+    { id: 3, name: 'Cynthia', salary: 504000},
+    { id: 4, name: 'Ann', salary: 454500 },
+  ];
+  
+  let sortedEmployees = employeesSalary(employees);
+  
+  console.log(sortedEmployees);
